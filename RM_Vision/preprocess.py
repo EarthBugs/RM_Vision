@@ -63,7 +63,7 @@ def preprocess(highlight_thr,gray,color_thr,frame,color_type=0):
     color_img = color_deal(color_thr,frame,color_type)
 
     kernele = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 7))
-    preprocessed = cv2.bitwise_and(img_color,img_high)
+    preprocessed = cv2.bitwise_and(color_img,highlight_img)
     #高通道和色融合图进行与运算
     preprocessed = cv2.dilate(preprocessed, kernele)
     #膨胀最终图
