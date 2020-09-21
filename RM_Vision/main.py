@@ -10,9 +10,9 @@ import lightfilter as lf
 #可在水平60°左右开始抓取，45°左右稳定抓取。
 
 debug_mode = False #单帧调试模式
-file_dir = 'test_videos\\' + 'red_in.mp4' #视频路径
+file_dir = 'test_videos\\' + 'blue_l.mp4' #视频路径
 highlight_thr = 230  #高光通道阈值
-color_type = 0 #灯条颜色参数，0为红，1为蓝，默认红
+color_type = 1 #灯条颜色参数，0为红，1为蓝，默认红
 color_thr = 110  #颜色通道饱和度阈值
 draw_color = (255, 0, 0)  #绘制颜色
 capture = cv2.VideoCapture(file_dir)
